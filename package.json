@@ -1,0 +1,24 @@
+{
+  "name": "blog_api",
+  "version": "1.0.0",
+  "description": "A CRUD api for blogging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/mikedolan03/blog_api.git"
+  },
+  "keywords": [
+    "blog",
+    "crud",
+    "rest",
+    "node"
+  ],
+  "author": "Mike Dolan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
