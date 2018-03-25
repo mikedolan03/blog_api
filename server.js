@@ -5,22 +5,14 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 //import the Blog post model
-const {BlogPosts} = require('./models');
+const blogPostsRouter = require('./blogpostsRouter');
 
 const jsonParser = bodyParser.json();
 const app = express();
 
 app.use(morgan('common'));
 
-//lets load a blog post or two here
-BlogPosts.create("Dear Diary", "You wont believe the day I had", "Mike", "March 25, 2018"); 
-BlogPosts.create("Dear Diary", "You wont believe the day I had", "Mike", "March 25, 2018"); 
-BlogPosts.create("Dear Diary", "You wont believe the day I had", "Mike", "March 25, 2018"); 
-
-//lets define a get that returns blog posts
-app.get('/blog-post', (req, res) => { 
-	res.json(BlogPosts.get());
-} ); 
+app.use('/blog-posts', blogPostsRouter);
 
 //list on port here
 
